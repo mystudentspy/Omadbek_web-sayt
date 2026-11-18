@@ -17,8 +17,12 @@ class OluvchiAdmin(ImportExportModelAdmin):
 @admin.register(Sotuvchi)
 class SotuvchiAdmin(admin.ModelAdmin):
     list_display = ('ism', 'familya', 'email', 'yosh')
+    list_filter = ('ism', 'familya', 'email', 'yosh')
+    search_fields = ('ism', 'familya' 'email', 'yosh')
+    actions = (new_ism, new_ism2)
 
 @admin.register(Mahsulot)
 class MahsulotAdmin(admin.ModelAdmin):
     autocomplete_fields = ('oluvchi',)
     list_display = ('nom', 'rang', 'narh', 'oluvchi', 'sotuvchi')
+    search_fields = ('nom',)
