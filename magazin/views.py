@@ -26,7 +26,7 @@ class SotuvchiView(View):
         sotuvchilar = Sotuvchi.objects.all()
         return render(
             request,
-            'sotuvchi/sotuvchilar.html',
+            'sotuvchilar/sotuvchilar.html',
             {
                 "sotuvchilar": sotuvchilar,
             }
@@ -38,7 +38,7 @@ class OluvchiView(View):
         oluvchilar = Oluvchi.objects.all()
         return render(
             request,
-            'oluvchi/oluvchilar.html',
+            'oluvchilar/oluvchilar.html',
             {
                 "oluvchilar": oluvchilar,
             }

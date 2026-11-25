@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Oluvchilar
+{% endblock %}
+
+{% block content %}
+
+<h1>Barcha oluvchilar shu yerda</h1>
+
+<ol>
+    {% for i in oluvchilar %}
+        <li>
+            {{ i.ism }}
+        </li>
+    {% endfor %}
+</ol>
+
+{% endblock %}
