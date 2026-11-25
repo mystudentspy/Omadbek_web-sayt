@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
-<h1>
-    Barcha ma'lumotlar shi yerda!!!
-</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}
+    home
+{% endblock %}
+{% block content %}
+    Mening magazinim bo'limlari:
+    <br>
+    <form action="{% url 'mahsulotlar' %}">
+        <button>
+            mahsulotlar
+        </button>
+    </form>
+    <br>
+    <a href="">
+        sotuvchilar
+    </a>
+{% endblock %}

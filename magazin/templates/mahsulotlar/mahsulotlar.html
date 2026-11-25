@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Mahsulotlar
+{% endblock %}
+
+{% block content %}
+
+<h1>Barcha mahsulotlar shu yerda</h1>
+
+<ol>
+    {% for i in mahsulotlar %}
+        <li>
+            {{ i.nom }}
+            {{ i.narh }}
+            {{ i.rang }}
+            {{ i.oluvchi.email }}
+            {{ i.oluvchi.yosh }}
+            sotuvchi:
+            {{ i.sotuvchi.ism }}
+        </li>
+    {% endfor %}
+</ol>
+
+{% endblock %}
