@@ -11,8 +11,10 @@
 <ol>
     {% for i in mahsulotlar %}
         <li>
-            {{ i.nom }}
-            {{ i.narh }}
+            <a href="{% url 'detail_mahsulot' i.pk %}">
+                {{ i.nom }}
+                {{ i.narh }}
+            </a>
         </li>
     {% endfor %}
 </ol>

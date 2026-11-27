@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+    Mahsulot
+{% endblock %}
+
+{% block content %}
+
+<h1>{{ mahsulot.nom }} haqida to'liq ma'lumot</h1>
+
+<h2>Nomi: {{ mahsulot.nom }}</h2>
+<h2>Narxi: {{ mahsulot.narh }}</h2>
+<h2>Rangi: {{ mahsulot.rang }}</h2>
+
+<h1>Oluvchining to'liq ma'lumotlari:</h1>
+
+<h2>
+    {{ mahsulot.oluvchi.ism }}
+    {{ mahsulot.oluvchi.familya }}
+    {{ mahsulot.oluvchi.yosh }}
+    {{ mahsulot.oluvchi.email }}
+</h2>
+
+<h1>Sotuvchining to'liq ma'lumotlari:</h1>
+
+<h2>{{ mahsulot.sotuvchi }}</h2>
+
+<a href="{% url 'mahsulotlar' %}">
+    Orqaga
+</a>
+
+{% endblock %}

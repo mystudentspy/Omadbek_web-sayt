@@ -11,8 +11,11 @@
 <ol>
     {% for i in sotuvchilar %}
         <li>
-            {{ i.ism }}
-            {{ i.familya }}
+             <a href="{% url 'detail_sotuvchi' i.pk %}">
+                {{ i.ism }}
+                {{ i.yosh }}
+                {{ i.email }}
+            </a>
         </li>
     {% endfor %}
 </ol>

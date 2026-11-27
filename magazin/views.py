@@ -21,6 +21,17 @@ class MahsulotView(View):
             }
         )
 
+class DetailMahsulotView(View):
+    def get(self, request, pk):
+        mahsulot = Mahsulot.objects.get(pk=pk)
+        return render(
+            request,
+            'mahsulotlar/detail_mahsulot.html',
+            {
+                "mahsulot": mahsulot,
+            }
+        )
+
 class SotuvchiView(View):
     def get(self, request):
         sotuvchilar = Sotuvchi.objects.all()
@@ -32,6 +43,16 @@ class SotuvchiView(View):
             }
         )
 
+class DetailSotuvchiView(View):
+    def get(self, request, pk):
+        sotuvchi = Mahsulot.objects.get(pk=pk)
+        return render(
+            request,
+            'sotuvchilar/detail_sotuvchi.html',
+            {
+                "sotuvchi": sotuvchi,
+            }
+        )
 
 class OluvchiView(View):
     def get(self, request):
@@ -41,5 +62,16 @@ class OluvchiView(View):
             'oluvchilar/oluvchilar.html',
             {
                 "oluvchilar": oluvchilar,
+            }
+        )
+
+class DetailOluvchiView(View):
+    def get(self, request, pk):
+        oluvchi = Mahsulot.objects.get(pk=pk)
+        return render(
+            request,
+            'oluvchilar/detail_oluvchi.html',
+            {
+                "oluvchi": oluvchi,
             }
         )
